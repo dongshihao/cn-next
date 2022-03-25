@@ -1,6 +1,6 @@
 {
-  "name": "cn-next",
-  "version": "1.25.19",
+  "name": "@alifd/next",
+  "version": "1.25.28",
   "description": "A configurable component library for web built on React.",
   "keywords": [
     "fusion",

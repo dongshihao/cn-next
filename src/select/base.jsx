@@ -198,7 +198,10 @@ export default class Base extends React.Component {
             visible: 'visible' in props ? props.visible : props.defaultVisible,
             dataSource: this.setDataSource(this.props),
             width: 100,
-            highlightKey: 'highlightKey' in props ? props.highlightKey : props.defaultHighlightKey,
+            highlightKey:
+                'highlightKey' in props
+                    ? props.highlightKey
+                    : props.value || props.defaultHighlightKey || props.defaultValue,
             srReader: '',
         };
 

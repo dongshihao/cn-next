@@ -270,6 +270,10 @@ class Select extends Base {
             Object.assign(state, {
                 highlightKey: nextProps.highlightKey,
             });
+        } else if ('value' in nextProps && nextProps.value !== prevState.value && nextProps.mode === 'single') {
+            Object.assign(state, {
+                highlightKey: nextProps.value,
+            });
         }
 
         if ('searchValue' in nextProps && nextProps.searchValue !== prevState.searchValue) {
@@ -421,9 +425,13 @@ class Select extends Base {
         }
     }
 
-    handleItemClick() {
+    handleItemClick(key) {
         if (!this.props.popupAutoFocus) {
             this.focusInput();
+        }
+
+        if (this.props.mode === 'single' && key === this.state.value) {
+            this.setVisible(false, 'itemClick');
         }
     }
 
@@ -1093,7 +1101,8 @@ class Select extends Base {
                 {inputEl}
                 <span aria-hidden>
                     <span>{mirrorText || placeholder}</span>
-                    <span>&nbsp;</span>
+                    {/* fix https://github.com/alibaba-fusion/next/issues/3781 */}
+                    <span style={{ display: 'inline-block', width: 1 }}>&nbsp;</span>
                 </span>
             </span>
         );

@@ -7,6 +7,7 @@ import VirtualBody from './virtual/body';
 import { statics } from './util';
 
 const noop = () => {};
+const THRESHOLD = 10;
 export default function virtual(BaseComponent) {
     class VirtualTable extends React.Component {
         static VirtualBody = VirtualBody;
@@ -128,7 +129,13 @@ export default function virtual(BaseComponent) {
             if (typeof rowHeight === 'function') {
                 return 0;
             }
-            return dataSource.length * rowHeight;
+            let count = 0;
+            dataSource.forEach(item => {
+                if (!item.__hidden) {
+                    count += 1;
+                }
+            });
+            return count * rowHeight;
         }
 
         computeInnerTop() {
@@ -137,7 +144,9 @@ export default function virtual(BaseComponent) {
                 return 0;
             }
 
-            return this.start * rowHeight;
+            const start = Math.max(this.start - THRESHOLD, 0);
+
+            return start * rowHeight;
         }
 
         getVisibleRange(ExpectStart) {
@@ -263,11 +272,15 @@ export default function virtual(BaseComponent) {
                 newDataSource = [];
                 components = { ...components };
                 const { start, end } = this.getVisibleRange(this.state.scrollToRow);
+                let count = -1;
                 dataSource.forEach((current, index, record) => {
-                    if (index >= start && index < end) {
-                        current.__rowIndex = index;
-                        newDataSource.push(current);
+                    if (!current.__hidden) {
+                        count += 1;
+                        if (count >= Math.max(start - THRESHOLD, 0) && count < end) {
+                            newDataSource.push(current);
+                        }
                     }
+                    current.__rowIndex = index;
                 });
 
                 if (!components.Body) {

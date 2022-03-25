@@ -1,5 +1,122 @@
 # Change Log 
 
+## [1.25.28](https://github.com/alibaba-fusion/next/compare/1.25.25...1.25.28) (2022-03-25)
+
+
+### Bug Fixes
+
+* **Dialog:** could custom margin-bottom when no footer fix [#3799](https://github.com/alibaba-fusion/next/issues/3799) ([#3809](https://github.com/alibaba-fusion/next/issues/3809)) ([6ddace0](https://github.com/alibaba-fusion/next/commit/6ddace0))
+* **Dialog:** height type can be either number or string ([#3807](https://github.com/alibaba-fusion/next/issues/3807)) ([174a971](https://github.com/alibaba-fusion/next/commit/174a971))
+* **Range:** onProcess&onChange props type error fix [#2769](https://github.com/alibaba-fusion/next/issues/2769) ([#3816](https://github.com/alibaba-fusion/next/issues/3816)) ([2235092](https://github.com/alibaba-fusion/next/commit/2235092))
+* **Select:** make highlight color configurable ([13d3dea](https://github.com/alibaba-fusion/next/commit/13d3dea))
+* **Table:** data should be mutable for async load ([1df62bf](https://github.com/alibaba-fusion/next/commit/1df62bf))
+* **Table:** do not change dataSource ([#3811](https://github.com/alibaba-fusion/next/issues/3811)) ([3c70a31](https://github.com/alibaba-fusion/next/commit/3c70a31))
+* **Table:** hidden to __hidden ([d818db6](https://github.com/alibaba-fusion/next/commit/d818db6))
+
+
+### Features
+
+* **Message:** can remove icon by iconType: false ([3cf723d](https://github.com/alibaba-fusion/next/commit/3cf723d))
+
+
+
+
+## [1.25.27](https://github.com/alibaba-fusion/next/compare/1.25.26...1.25.27) (2022-03-18)
+
+
+### Bug Fixes
+
+* **Dialog:** height type can be either number or string ([#3807](https://github.com/alibaba-fusion/next/issues/3807)) ([174a971](https://github.com/alibaba-fusion/next/commit/174a971))
+
+
+
+
+## [1.25.26](https://github.com/alibaba-fusion/next/compare/1.25.25...1.25.26) (2022-03-17)
+
+
+### Bug Fixes
+
+* **Table:** do not change dataSource ([#3811](https://github.com/alibaba-fusion/next/issues/3811)) ([3c70a31](https://github.com/alibaba-fusion/next/commit/3c70a31))
+* **Table:** hidden to __hidden ([d818db6](https://github.com/alibaba-fusion/next/commit/d818db6))
+
+
+
+
+## [1.25.25](https://github.com/alibaba-fusion/next/compare/1.25.24...1.25.25) (2022-03-17)
+
+
+### Bug Fixes
+
+* some pc h5 cross issue ([f5d23e2](https://github.com/alibaba-fusion/next/commit/f5d23e2))
+* **Select:** could select item already selected fix [#3791](https://github.com/alibaba-fusion/next/issues/3791) ([15c373b](https://github.com/alibaba-fusion/next/commit/15c373b))
+* **Select:** optimize controlled highlightKey question, close [#3795](https://github.com/alibaba-fusion/next/issues/3795) ([#3798](https://github.com/alibaba-fusion/next/issues/3798)) ([444680a](https://github.com/alibaba-fusion/next/commit/444680a))
+* **Table:** virtual table with selection should tell all records, fix [#3792](https://github.com/alibaba-fusion/next/issues/3792) ([ff7bb16](https://github.com/alibaba-fusion/next/commit/ff7bb16))
+* 修复从只读态切换到输入态时无法删除已上传的问题 ([2ded045](https://github.com/alibaba-fusion/next/commit/2ded045))
+
+
+
+
+## [1.25.24](https://github.com/alibaba-fusion/next/compare/1.25.22...1.25.24) (2022-03-15)
+
+
+### Bug Fixes
+
+* **Input:** now allow to toggle visibility when password input is disabled ([91a2cf2](https://github.com/alibaba-fusion/next/commit/91a2cf2))
+* **Range:** repair browser count float issue, close [#3652](https://github.com/alibaba-fusion/next/issues/3652) ([eef6e11](https://github.com/alibaba-fusion/next/commit/eef6e11))
+* **Select:** make width stable ([1ff2b73](https://github.com/alibaba-fusion/next/commit/1ff2b73))
+* **Tab:** style compile fail ([8033e4a](https://github.com/alibaba-fusion/next/commit/8033e4a))
+* **Table:** tree table support virtual ([0a4a311](https://github.com/alibaba-fusion/next/commit/0a4a311))
+* **TimePicker2:** fix RangePicker wrong minutes and seconds disabled ([#3771](https://github.com/alibaba-fusion/next/issues/3771)), close [#3766](https://github.com/alibaba-fusion/next/issues/3766) ([1aa6f16](https://github.com/alibaba-fusion/next/commit/1aa6f16))
+
+
+
+
+## [1.25.23](https://github.com/alibaba-fusion/next/compare/1.25.22...1.25.23) (2022-03-03)
+
+
+### Bug Fixes
+
+* **Tab:** style compile fail ([8033e4a](https://github.com/alibaba-fusion/next/commit/8033e4a))
+* **Table:** tree table support virtual ([0a4a311](https://github.com/alibaba-fusion/next/commit/0a4a311))
+* **TimePicker2:** fix RangePicker wrong minutes and seconds disabled ([#3771](https://github.com/alibaba-fusion/next/issues/3771)), close [#3766](https://github.com/alibaba-fusion/next/issues/3766) ([1aa6f16](https://github.com/alibaba-fusion/next/commit/1aa6f16))
+
+
+
+
+## [1.25.22](https://github.com/alibaba-fusion/next/compare/1.25.21...1.25.22) (2022-03-01)
+
+
+### Bug Fixes
+
+* **NumberPicker:** repair numberPicker log string, close [#3768](https://github.com/alibaba-fusion/next/issues/3768) ([#3769](https://github.com/alibaba-fusion/next/issues/3769)) ([1b4bfec](https://github.com/alibaba-fusion/next/commit/1b4bfec))
+* use Set to avoid duplication keys ([#3772](https://github.com/alibaba-fusion/next/issues/3772)),close [#3773](https://github.com/alibaba-fusion/next/issues/3773) ([38df98f](https://github.com/alibaba-fusion/next/commit/38df98f))
+
+
+
+
+## [1.25.21](https://github.com/alibaba-fusion/next/compare/1.25.20...1.25.21) (2022-02-24)
+
+
+### Bug Fixes
+
+* **Tab:** config active line padding ([66ee0cb](https://github.com/alibaba-fusion/next/commit/66ee0cb))
+* **Transfer:** fix some wrong prop-types of transfer ([a4c95dd](https://github.com/alibaba-fusion/next/commit/a4c95dd))
+
+
+
+
+## [1.25.20](https://github.com/alibaba-fusion/next/compare/1.25.19...1.25.20) (2022-02-22)
+
+
+### Bug Fixes
+
+* **NumberPicker:** repair field setValues 0 numberPicker unread, clos… ([#3752](https://github.com/alibaba-fusion/next/issues/3752)) ([53c6feb](https://github.com/alibaba-fusion/next/commit/53c6feb))
+* **Overlay:** ts add placement ([#3753](https://github.com/alibaba-fusion/next/issues/3753)) ([6de9d6b](https://github.com/alibaba-fusion/next/commit/6de9d6b))
+* **Upload:** card add ts ([78d3bb6](https://github.com/alibaba-fusion/next/commit/78d3bb6))
+
+
+
+
 ## [1.25.19](https://github.com/alibaba-fusion/next/compare/1.25.18...1.25.19) (2022-02-15)
 
 
