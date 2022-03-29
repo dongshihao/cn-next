@@ -80,7 +80,7 @@
     "precommit": "lint-staged",
     "changelog": "node ./scripts/changelog.js",
     "mix": "node ./scripts/mix.js",
-    "prepub": "npm run eslint && npm run stylelint && npm run changelog && npm run build && npm run check && npm run docs && npm run clear-dist && npm run pack && npm run pack -- minimize && npm run pack-adaptor"
+    "prepublish": "npm run eslint && npm run stylelint && npm run changelog && npm run build && npm run check && npm run docs && npm run clear-dist && npm run pack && npm run pack -- minimize && npm run pack-adaptor"
   },
   "lint-staged": {
     "types/**/*.d.ts": [
