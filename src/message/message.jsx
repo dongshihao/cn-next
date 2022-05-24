@@ -50,7 +50,7 @@ class Message extends Component {
         /**
          * 显示的图标类型，会覆盖内部设置的IconType，传false不显示图标
          */
-        iconType: PropTypes.string | false,
+        iconType: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
         /**
          * 显示关闭按钮
          */
