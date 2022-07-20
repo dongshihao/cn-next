@@ -1,5 +1,86 @@
 # Change Log 
 
+## [1.25.45](https://github.com/alibaba-fusion/next/compare/1.25.44...1.25.45) (2022-06-28)
+
+
+### Bug Fixes
+
+* **CascaderSelect:** filter duplicated non-existent value, close [#3921](https://github.com/alibaba-fusion/next/issues/3921) ([#3968](https://github.com/alibaba-fusion/next/issues/3968)) ([7b8ab75](https://github.com/alibaba-fusion/next/commit/7b8ab75))
+
+
+
+
+## [1.25.44](https://github.com/alibaba-fusion/next/compare/1.25.43...1.25.44) (2022-06-21)
+
+
+### Bug Fixes
+
+* **Table:** table d.ts add wordBreak props ([#3960](https://github.com/alibaba-fusion/next/issues/3960)) ([5163641](https://github.com/alibaba-fusion/next/commit/5163641))
+* **Tree:** not calculate all checked value when checkedStrategy is child ([#3961](https://github.com/alibaba-fusion/next/issues/3961)) ([5e2c577](https://github.com/alibaba-fusion/next/commit/5e2c577))
+* **TreeSelect:** support turn off local filter, close [#3939](https://github.com/alibaba-fusion/next/issues/3939) ([#3959](https://github.com/alibaba-fusion/next/issues/3959)) ([6f6b3f1](https://github.com/alibaba-fusion/next/commit/6f6b3f1))
+
+
+
+
+## [1.25.43](https://github.com/alibaba-fusion/next/compare/1.25.42...1.25.43) (2022-06-16)
+
+
+### Bug Fixes
+
+* **Form:**  fix onSubmit types ([#3955](https://github.com/alibaba-fusion/next/issues/3955)) ([99ff66f](https://github.com/alibaba-fusion/next/commit/99ff66f))
+
+
+
+
+## [1.25.42](https://github.com/alibaba-fusion/next/compare/1.25.41...1.25.42) (2022-06-14)
+
+
+### Bug Fixes
+
+* **Menu:** focuseKey type contain obj, close [#3929](https://github.com/alibaba-fusion/next/issues/3929) ([086937b](https://github.com/alibaba-fusion/next/commit/086937b))
+* **Slider:** add pauseOnHover on d.ts  ([#3950](https://github.com/alibaba-fusion/next/issues/3950)) ([fc8d20f](https://github.com/alibaba-fusion/next/commit/fc8d20f))
+* **TreeSelect:** calculate all checked value only when treeCheckedStrategy=all, close[#3936](https://github.com/alibaba-fusion/next/issues/3936) ([35ff149](https://github.com/alibaba-fusion/next/commit/35ff149))
+* **TreeSelect:** fix treeCheckedStrategy issue ([2558ce7](https://github.com/alibaba-fusion/next/commit/2558ce7))
+
+
+### Features
+
+* **Form:** new api errorMessageName for replace validate name fix [#3937](https://github.com/alibaba-fusion/next/issues/3937) ([ed0915d](https://github.com/alibaba-fusion/next/commit/ed0915d))
+
+
+
+
+## [1.25.41](https://github.com/alibaba-fusion/next/compare/1.25.40...1.25.41) (2022-06-02)
+
+
+### Bug Fixes
+
+* **TimePicker2:** fix FooterPanel ok button locale, close [#3932](https://github.com/alibaba-fusion/next/issues/3932) ([1086b4b](https://github.com/alibaba-fusion/next/commit/1086b4b))
+
+
+
+
+## [1.25.40](https://github.com/alibaba-fusion/next/compare/1.25.39...1.25.40) (2022-05-31)
+
+
+### Bug Fixes
+
+* **DatePicker2:** fix defaultPanelValue default value, close [#3803](https://github.com/alibaba-fusion/next/issues/3803) ([1491c51](https://github.com/alibaba-fusion/next/commit/1491c51))
+
+
+
+
+## [1.25.39](https://github.com/alibaba-fusion/next/compare/1.25.38...1.25.39) (2022-05-26)
+
+
+### Bug Fixes
+
+* **Core:** remove s-auto for sass-build error ([41b5f84](https://github.com/alibaba-fusion/next/commit/41b5f84))
+* **Menu:** repair menu focusedKey type warning, close [#3817](https://github.com/alibaba-fusion/next/issues/3817) ([a673175](https://github.com/alibaba-fusion/next/commit/a673175))
+
+
+
+
 ## [1.25.38](https://github.com/alibaba-fusion/next/compare/1.25.37...1.25.38) (2022-05-19)
 
 

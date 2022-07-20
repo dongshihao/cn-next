@@ -203,6 +203,10 @@ class TreeSelect extends Component {
          */
         showSearch: PropTypes.bool,
         /**
+         * 	是否使用本地过滤，在数据源为远程的时候需要关闭此项
+         */
+        filterLocal: PropTypes.bool,
+        /**
          * 在搜索框中输入时触发的回调函数
          * @param {String} keyword 输入的关键字
          */
@@ -314,6 +318,7 @@ class TreeSelect extends Component {
         onChange: noop,
         tagInline: false,
         showSearch: false,
+        filterLocal: true,
         onSearch: noop,
         onSearchClear: noop,
         notFoundContent: 'Not Found',
@@ -427,7 +432,11 @@ class TreeSelect extends Component {
         const nonExistentValueKeys = this.getNonExistentValueKeys();
 
         let keys = this.getKeysByValue(value);
-        keys = getAllCheckedKeys(keys, this.state._k2n, this.state._p2n);
+
+        if (treeCheckedStrategy !== 'child') {
+            // there's no need to calculate all checked value when treeCheckedStrategy=child, close #3936
+            keys = getAllCheckedKeys(keys, this.state._k2n, this.state._p2n);
+        }
 
         switch (treeCheckedStrategy) {
             case 'parent':
@@ -762,6 +771,7 @@ class TreeSelect extends Component {
             treeLoadData,
             treeProps: customTreeProps = {},
             showSearch,
+            filterLocal,
             dataSource,
             children,
             readOnly,
@@ -808,7 +818,7 @@ class TreeSelect extends Component {
 
         let notFound = false;
         let newChildren;
-        if (showSearch && searchedValue) {
+        if (filterLocal && showSearch && searchedValue) {
             treeProps.expandedKeys = expandedKeys;
             treeProps.autoExpandParent = autoExpandParent;
             treeProps.onExpand = this.handleExpand;
